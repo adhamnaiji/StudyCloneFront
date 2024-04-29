@@ -1,0 +1,35 @@
+
+
+<div class="container">
+    <h1 class="text-center">{{curentAg.name}}</h1>
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <div class="card text-center">
+
+            <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h2 class="card-title">Agent</h2>
+                    <h5>Specialized in :{{curentAg.specialite}}</h5>
+                    <p>Address: {{ " "+curentAg.adress}} </p>
+                    <p>Phone Number: {{" "+curentAg.phone}} </p>
+                    <p>Rating: {{" "+curentAg.likes}} </p>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="d-flex justify-content-center align-items-center">
+                      <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png" height="150px" width="150px" alt="User Icon" class="user-icon">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+  
+          <div class="card-footer" >
+            <button  (click)="reserver(curentAg.id)" class="btn btn-{{!curentAg.Availability ? 'danger' : 'success'}}">
+              {{!curentAg.Availability  ? 'Engaged' : 'Available'}}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

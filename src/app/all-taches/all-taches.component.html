@@ -1,0 +1,20 @@
+<p>all-taches works!</p>
+<ul class="list-group">
+    <li *ngFor="let task of taches" class="list-group-item">
+      <div class="row">
+        <div class="col">
+          <p><strong>Date:</strong> {{ task.date }}</p>
+          <p><strong>Heure début:</strong> {{ task.heure_debut }}</p>
+          <p><strong>Heure fin:</strong> {{ task.heure_fin }}</p>
+          <p><strong>Status:</strong> {{ task.status }}</p>
+          <p><strong>Lieu:</strong> {{ task.lieu }}</p>
+          <p><strong>Patient Name :</strong> {{ task.employe.nom +" "}}{{ task.employe.prenom }}</p>
+        </div>
+        <div class="col">
+          <p><strong>Agent:</strong> {{ task.patient.nom }} {{ task.patient.prenom }}</p>
+          <!--<p><strong>Employé:</strong> {{ task.user.nom }} {{ task.user.prenom }}</p>!-->
+          <app-button text="Delete Task" color="#1A938C" (btnClick)="deletetache(task.id_t)"></app-button>
+        </div>
+      </div>
+    </li>
+  </ul>

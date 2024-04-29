@@ -1,0 +1,31 @@
+<app-search [placeholderT]="valueS"></app-search>
+<!---->
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Full Name</th>
+        <th scope="col">Availibility</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Adress</th>
+        <th scope="col">specialite</th>
+        <th scope="col">Rating</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        
+      <tr *ngFor="let agent of agents">
+        <th scope="row">{{agent.id}}</th>
+        <td>{{agent.name}}</td>
+        <td>{{agent.Availability}}</td>
+        <td>{{agent.phone}}</td>
+        <td>{{agent.adress}}</td>
+        <td>{{agent.specialite}}</td>
+        <td>{{agent.likes}}</td>
+        <td *ngIf="!admin"><app-button text="Details" color="#1A938C" (btnClick)="details(agent)"></app-button></td>
+
+        </tr>
+
+    </tbody>
+  </table>

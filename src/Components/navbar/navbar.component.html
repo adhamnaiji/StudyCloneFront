@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid justify-content-center">
+        <a class="navbar-brand" href="#">Task Now</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mx-auto"> 
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Acceuil</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">A Propos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/agents">Agents</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+
+            </ul>
+            <div *ngIf="!getll ">
+                <a class="navbar-brand" routerLink="signup">S'inscrire</a>
+                <app-button text="Login" color="#1A938C" (btnClick)="GoToSignIn()"></app-button>
+            </div>
+        
+
+            <div class="dropdown" *ngIf="getll">
+                <div class="row" style="background-color:white; opacity:0.8; border-radius: 0px 0px 30px 30px;">
+                    <div class="col">
+                        <select id="disabledSelect" class="form-control" (change)="onSelect()">
+                            <option value="Select an option" disabled selected>{{infou.nom+" "}}{{infou.prenom}}</option>
+                            <option value="user/{{infou.nom}}">Voir le profile</option>
+                            <!--<option value="taches">Taches</option>-->
+                            <option value="Library">Mes Cours</option>
+                            <option value="profile/{{infou.nom}}">Parametre de compte</option>
+                            <option value="deconnexion">Deconnexion</option>
+
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+
+        
+    </div>
+</div>
+</nav>
+

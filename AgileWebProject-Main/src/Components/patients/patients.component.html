@@ -1,0 +1,27 @@
+<app-search [placeholderT]="valueS "></app-search>
+<!---->
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Full Name</th>
+        <th scope="col">Availibility</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Adress</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        
+      <tr *ngFor="let patient of users">
+        <th scope="row">{{patient.id}}</th>
+        <td>{{patient.nom}}</td>
+        <td>{{patient.disponibilite}}</td>
+        <td>{{patient.telephone}}</td>
+        <td>{{patient.localisation}}</td>
+        <td *ngIf="admin"><app-button text="Delete" color="red" (btnClick)="delete(patient.id)"></app-button></td>
+       
+        </tr>
+
+    </tbody>
+  </table>

@@ -1,0 +1,68 @@
+<div class="container-fluid">
+    <div class="row justify-content-center" style="min-height: calc(100vh - 56px);">
+
+        <div class="col-md-6 bg-secondary" style="background-image:url('https://i.etsystatic.com/35862082/r/il/0e08ca/3901011794/il_fullxfull.3901011794_o9gu.jpg'); background-size: cover;">
+            
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
+            <form style="width: 60%; height: 95%; padding: 30px;" #userForm="ngForm" (ngSubmit)="submitForm(userForm)">
+                <div class="form-group text-center">
+                    <h1>Bienvenu</h1>
+                    <h5>Connectez-vous</h5>
+                </div>
+                <div class="d-flex justify-content-center" style="padding: 8px;"> 
+                    <input
+                    placeholder="Enter Nom"
+                     type="text"
+                     id="name"
+                     name="nom"
+                     class="form-control"
+                     required
+                     minlength="4"
+                     ngModel
+                    #name="ngModel"
+                     />
+
+               <div
+              *ngIf="name.invalid && name.touched"
+              class="alert"
+                            >
+             <div *ngIf="name.errors?.['required']">Name is required.</div>
+            <div *ngIf="name.errors?.['minlength']">
+             Name must be at least 4 characters.
+              </div>
+             </div>
+
+                    <input type="text" class="form-control" id="prenom" aria-describedby="emailHelp" placeholder="Enter Prénom" name="prenom" ngModel required>  
+                </div>
+
+                <div class="form-group" style="padding: 8px;"> 
+                    <input type="Date" class="form-control" id="date" aria-describedby="emailHelp" placeholder="Enter votre date de naissance" name="date" ngModel required> 
+                </div>
+
+                <div class="form-group" style="padding: 8px;">   
+                    <input type="text" class="form-control" id="mail" placeholder="Entrez votre mail" name="mail" ngModel required>
+                </div>
+                <div class="form-group" style="padding: 8px;">   
+                    <input type="text" class="form-control" id="phone" placeholder="Entrez votre numero" name="phone" ngModel required>
+                </div>
+                <div class="form-group" style="padding: 8px;">   
+                    <input type="text" class="form-control" id="specialite" placeholder="Entrez votre specialite" name="specialite" ngModel required>
+                </div>
+                <div class="form-group" style="padding: 8px;"> 
+                    <input type="password" class="form-control" id="passeword" placeholder="Entrez votre mot de passe " name="password" ngModel required>
+                </div>
+                <div class="form-group" style="padding: 8px;"> 
+                    <input type="password" class="form-control" id="confpasseword" placeholder="Confirmer votre mot de passe" name="confirmPassword" ngModel required>
+                </div>
+                <div class="form-group" style="padding: 8px;"> 
+                    <input type="text" class="form-control" id="adresse" placeholder="Entrez votre adresse" name="adresse" ngModel required>
+                </div>
+                <div class="d-flex justify-content-center" style="padding: 20px;">
+                    <button type="submit" class="btn btn-primary" style="background-color: #1A938C;width: 70%; border-radius: 10px;" [disabled]="userForm.invalid || userForm.pristine">Inscrire</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<p>mes-cours enrolled!</p>
+<ul class="list-group">
+    <li *ngFor="let course of EnroledCourses" class="list-group-item">
+      <div class="row">
+        <div class="col">
+     
+          <p><strong>title:</strong> {{ course.title }}</p>
+          <p><strong>description début:</strong> {{ course.description  }}</p>
+          <p><strong>price fin:</strong> {{ course.price }}</p>
+          <p><strong>Name Owner:</strong> {{ course.user.nom }}</p>
+
+          <!--<p><strong>owner:</strong> {{ course.user.nom }}</p>-->
+        </div>
+        <div class="col">
+          <!--<p><strong>Agent:</strong> {{ course.nom }} {{ course.prenom }}</p>-->
+          <!--<p><strong>Employé:</strong> {{ task.user.nom }} {{ task.user.prenom }}</p>!-->
+           <!--<app-button text="Delete Task" color="#1A938C" ></app-button>-->
+        </div>
+      </div>
+    </li>
+  </ul>
+  <p>my courses that i have created!</p>
+  <ul class="list-group">
+      <li *ngFor="let courset of OwnCourses" class="list-group-item">
+        <div class="row">
+          <div class="col">
+       
+            <p><strong>title:</strong> {{ courset.title }}</p>
+            <p><strong>description début:</strong> {{ courset.description  }}</p>
+            <p><strong>price fin:</strong> {{ courset.price }}</p>
+            
+  
+            <!--<p><strong>owner:</strong> {{ course.user.nom }}</p>-->
+          </div>
+          <div class="col">
+            <!--<p><strong>Agent:</strong> {{ course.nom }} {{ course.prenom }}</p>-->
+            <!--<p><strong>Employé:</strong> {{ task.user.nom }} {{ task.user.prenom }}</p>!-->
+             <!--<app-button text="Delete Task" color="#1A938C" ></app-button>-->
+          </div>
+        </div>
+      </li>
+    </ul>
+  

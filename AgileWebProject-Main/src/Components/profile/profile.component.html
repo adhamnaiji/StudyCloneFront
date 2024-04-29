@@ -1,0 +1,35 @@
+<div class="container">
+    <h1 class="text-center">User Profile</h1>
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <div class="card text-center">
+
+            <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h2 class="card-title">{{infou.nom.toUpperCase()}} {{infou.prenom.toUpperCase()}}</h2>
+                    
+                    <p>Email: {{infou.email}}</p>
+                    <p>Age: {{infou.age}}</p>
+                    <p>Address: {{infou.localisation}}</p>
+                    <p>Phone Number: {{infou.telephone}}</p>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="d-flex justify-content-center align-items-center">
+                      <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png" height="150px" width="150px" alt="User Icon" class="user-icon">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+  
+          <div class="card-footer">
+            <button class="btn btn-{{infou.disponibilite === 'false' ? 'danger' : 'success'}}">
+              {{infou.disponibilite === 'false' ? 'Engaged' : 'Connected'}}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

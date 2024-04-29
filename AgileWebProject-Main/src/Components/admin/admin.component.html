@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar (left component) -->
+      <div class="col-md-3 sidebar">
+        <h2 class="text-center">Admin Dashboard</h2>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/admin/agents']" routerLinkActive="router-link-active"><i class="fas fa-home"></i> Agents</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/admin/users']" routerLinkActive="router-link-active" ><i class="fas fa-users"></i> Users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/admin/taches']" routerLinkActive="router-link-active"><i class="fas fa-cogs"></i> All Tasks</a>
+          </li>
+          <!-- Add more navigation links as needed -->
+        </ul>
+      </div>
+      <!-- Content (right component) -->
+      <div class="col-md-9 content">
+        <!-- Add content here -->
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  
